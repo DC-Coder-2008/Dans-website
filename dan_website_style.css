@@ -1,0 +1,39 @@
+h1 {
+	color: #FF0000;
+}
+
+p {
+	color: #349A40;
+}
+
+#School_stuff a {
+ color: #0036FF;
+}
+
+#Common a {
+	color: #FF428E;
+}
+
+#Other_useful_stuff a {
+	color: #FF9600;
+}
+
+#Fun a {
+	color: #09C500;
+}
+
+#Temp a {
+	color: #000000;
+}
+
+.return a {
+	color: #FF00FF
+}
+
+.defaultLink {
+	color: #0036FF;
+}
+
+table, th, td {
+	border:1px solid #000000;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" href ="dan_website_style.css">
+		<title>Dan's website: javascript practice</title>
+
+		<script src="dan_javascript_functions.js"></script>
+	</head>
+
+	<body id="body">
+
+		<div class="Changing_text">
+			<p id ="example">Here is some test text.</p>
+			<p id ="example2">Here is some more test text.</p>
+			
+			<button onclick = 'generalTextChange("I changed!",["example","example2"])'>Press me to change the text.</button>
+
+			<p id="example3">More text is here!</p>
+			<p id="example4">Even more text is here!</p>
+
+			<button onclick = 'generalTextChange("CHANGE INITIALISED",["example3","example4"])'>Press me to change the text.</button>
+		</div>
+
+		<br>
+
+		<div id="Changing image">
+			<img id="circle" src="Images/jstest_green_circle.png"></img><br>
+
+			<button onclick='generalSourceChange("Images/jstest_red_circle.png", ["circle"])'>RED</button>
+
+			<button onclick='generalSourceChange("Images/jstest_green_circle.png", ["circle"])'>GREEN</button>
+		</div>
+
+		<br>
+
+		<div id="hide_show_text">
+			<p id="hideTest">Here is some more test text.</p>
+
+			<br id="hideButtonSpace1"><br id="hideButtonSpace2"><br id="hideButtonSpace3">
+
+			<button id="hideTextButton" onclick='Hide(["hideTest","hideTextButton"]); Show(["showTextButton","hideButtonSpace1","hideButtonSpace2","hideButtonSpace3"])'>
+				Click to hide text.</button>
+			<button id="showTextButton" onclick='Show(["hideTest","hideTextButton"]); Hide(["showTextButton","hideButtonSpace1","hideButtonSpace2","hideButtonSpace3"])'>
+				Click to show text</button>
+		</div>
+
+		<br>
+
+		<div id="alert_test">
+			<p>This text has an error</p>
+			<button onclick='errorMessage("An error occurred")'>Click to cause an error</button>
+		</div>
+		
+		<br>
+
+		<div id="iframe_stuff">
+			<iframe id="changeableIframeExample" width="700" height="350" src="https://www.wikipedia.org/"></iframe><br><br>
+			<button onclick='generalSourceChange("https://theuselessweb.com/",["changeableIframeExample"])'>This button will change this webpage.</button>
+		</div>
+
+		<br><br><br>
+
+		<div id="Changeable_links_test">
+			<a class="defaultLink" id="ChangeableLinkExample" target="_blank" href="https://images.google.com">Google Images.</a>
+			<br><br>
+			<button onclick='linkSourceChange("https://www.youtube.com/watch?v=dQw4w9WgXcQ",["ChangeableLinkExample"]),
+			generalTextChange("Useless website!",["ChangeableLinkExample"])'>This button will change the website this link goes to.</button>
+		</div>
+
+		<br>
+
+		<div id="randomStringOfNumbers">
+			<button onclick='generalTextChange(random(1,9999999999999),["number"])'>Press to generate a number.</button>
+			<p id="number"></p>
+		</div>
+
+		<br>
+
+		<div id="randomColourChange">
+			<p id="changeableColour" style="color: #9000FF">This text is coloured</p>
+			<button onclick='colourChange("#FF5500",["changeableColour"]), Show(["randomColourButton"])'>Click to change the colour to orange</button>
+
+			<button id= "randomColourButton" onclick='randomColourChange(["changeableColour"])'>Click to change the colour to something random.</button>
+
+			<p id="flashingText">This text is green.</p>
+
+			<button onclick='colourFlashRandom(10,["flashingText"]); generalTextChange("This text is flashing different colours.", ["flashingText"]); '>
+				Press to make the text flash</button>
+
+			<button onclick='oneTime_BgColourChange()'>Press to make the background flash.</button>
+			
+		</div>
+
+		<!--
+			TODO:
+			Make some text that grows/shrinks when a button is pressed. (Use css/JS combo.)
+			Add a button to make the background flash
+		-->
+
+		<br><br><br><br>
+		<hr>
+
+        <div class="return">
+            <a href="dan_main_webpage.htm">Back to main page</a>
+        </div>
+
+		<div id="Startup scripts">
+			<script> Hide(["showTextButton","randomColourButton","hideButtonSpace1","hideButtonSpace2","hideButtonSpace3"]) </script>
+			
+		</div>
+
+	</body>
+
+</html>
