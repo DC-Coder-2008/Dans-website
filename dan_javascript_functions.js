@@ -115,9 +115,8 @@ function oneTime_BgColourChange() {
 
 	function BgColourChange(colour) {document.getElementById("body").style.backgroundColor= colour;}
 	BgColourChange(("#" + randomHexAsString(0,16777215)));
-    
-	function BgFlash() {BgColourChange();}
+	function BgFlash() {BgColourChange(("#" + randomHexAsString(0,16777215)));}
 
-	setInterval(BgFlash, 100);
+	setInterval(BgFlash, 10);
 
 }
