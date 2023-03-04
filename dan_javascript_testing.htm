@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<link rel="stylesheet" href ="dan_website_style.css">
-		<title>Dan's website: javascript practice</title>
+<head>
+	<link rel="stylesheet" href ="dan_website_style.css">
+	<title>Dan's website: javascript practice</title>
 
-		<script src="dan_javascript_functions.js"></script>
-	</head>
+	<script src="dan_javascript_functions.js"></script>
+</head>
 
-	<body id="body">
+	
+
+<body id="body">
+
+	<div id="Main"></div>
 
 		<div class="Changing_text">
 			<p id ="example">Here is some test text.</p>
@@ -59,7 +63,7 @@
 			<button onclick='generalSourceChange("https://theuselessweb.com/",["changeableIframeExample"])'>This button will change this webpage.</button>
 		</div>
 
-		<br><br><br>
+		<br><br>
 
 		<div id="Changeable_links_test">
 			<a class="defaultLink" id="ChangeableLinkExample" target="_blank" href="https://images.google.com">Google Images.</a>
@@ -87,10 +91,19 @@
 
 			<button onclick='colourFlashRandom(10,["flashingText"]); generalTextChange("This text is flashing different colours.", ["flashingText"]); '>
 				Press to make the text flash</button>
-				<br>
+				<br><br>
 			<button onclick='oneTime_BgColourChange()'>Press to make the background flash.</button>
+		</div>
+
+		<br><br>
+
+		<div id="darkside">
+
+			<button id = "DarkSideButton"onclick="DarkSide()">Here is a button that will do multiple things.</button>
 			
 		</div>
+
+		
 
 		<!--
 			TODO:
@@ -98,15 +111,79 @@
 		-->
 
 		<br><br><br><br>
-		<hr>
+
+		<hr class="line" >
 
         <div class="return">
             <a href="dan_main_webpage.htm">Back to main page</a>
         </div>
 
-		<div id="Startup scripts">
-			<script> Hide(["showTextButton","randomColourButton","hideButtonSpace1","hideButtonSpace2","hideButtonSpace3"]) </script>
+		<br><br>
+
+		<div id="Audio">
+			<audio id="DarthVaderThemeTune" loop=true controls>    <source src="Audio/Darth_Vader_tune.mp3">	</audio>
+			<audio id="rickroll" loop=true controls>    <source src="Audio/rickroll.mp3">	</audio>
+		</div>
+
+	</div>
+
+		<div id="Scripts">
+			<script> Hide(["showTextButton","randomColourButton","hideButtonSpace1","hideButtonSpace2","hideButtonSpace3","DarthVaderImage"]) 
 			
+			
+			</script>
+
+			<script id="DarkSideButtonScript">
+				function DarkSide() {
+
+					setTimeout(NeverUnderestimateThePower, 250);
+					setTimeout(BlackScreen, 3000);
+					setTimeout(DarthVader, 4000);
+					setTimeout(DarthVaderTunePlay, 4250);
+					setTimeout(Rickroll, 14000)
+				}
+
+				function NeverUnderestimateThePower() {
+					generalTextChange("Never underestimate the power of the dark side.", ["DarkSideButton"]);
+				}
+
+				function BlackScreen() {
+					BgColourChange("#000000");
+				}
+
+				function DarthVader() {
+					document.getElementById("body").style.backgroundImage= "url('Images/DarthVader')";
+					document.getElementById("body").style.backgroundRepeat= "no-repeat";
+					document.getElementById("body").style.backgroundPosition= "center";
+					document.getElementById("body").style.backgroundAttachment= "fixed";
+				}
+
+				function DarthVaderTunePlay() {
+					var darthVaderTune = document.getElementById("DarthVaderThemeTune");
+					darthVaderTune.volume = 1;
+					darthVaderTune.currentTime = 0;
+					darthVaderTune.play();
+					
+				}
+
+				function Rickroll() {
+				
+				document.getElementById("DarthVaderThemeTune").pause()
+
+				document.getElementById("body").style.backgroundImage= "url('Gifs/rickroll.gif')"
+				document.getElementById("body").style.backgroundRepeat= "no-repeat";
+				document.getElementById("body").style.backgroundPosition= "center";
+				document.getElementById("body").style.backgroundSize= "cover";
+				document.getElementById("body").style.backgroundAttachment= "fixed";
+
+				var rickroll = document.getElementById("rickroll");
+				rickroll.volume= 1;
+				rickroll.currentTime = 0;
+				rickroll.play();
+
+				}
+
+			</script>
 		</div>
 
 	</body>

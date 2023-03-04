@@ -110,10 +110,14 @@ function colourFlashRandom (speed, id) {
 	setInterval(rGenColour, speed);
 }
 
+function BgColourChange(colour) {
+	document.getElementById("body").style.backgroundColor= colour;
+}
+
 function oneTime_BgColourChange() {
 	errorMessage("If you have epilepsy, reload the page now before the screen starts to flash.");
 
-	function BgColourChange(colour) {document.getElementById("body").style.backgroundColor= colour;}
+	
 	BgColourChange(("#" + randomHexAsString(0,16777215)));
 	function BgFlash() {BgColourChange(("#" + randomHexAsString(0,16777215)));}
 
