@@ -114,7 +114,7 @@ function BgColourChange(colour) {
 	document.getElementById("body").style.backgroundColor= colour;
 }
 
-function oneTime_BgColourChange() {
+function oneTime_BgColourFlash() {
 	errorMessage("If you have epilepsy, reload the page now before the screen starts to flash.");
 
 	
@@ -123,4 +123,26 @@ function oneTime_BgColourChange() {
 
 	setInterval(BgFlash, 10);
 
+}
+
+function TextSizeChange (setTo,changeBy,id) {
+
+	if (setTo != 0) {
+
+		for(let i = 0; i < id.length; i++) {
+			document.getElementById(id[i]).style.fontSize = setTo + "px";
+		}
+	}
+
+	else {
+		for(let i = 0; i < id.length; i++) {
+			let elementToRescale = document.getElementById(id[i]);
+			let startingFontSize = window.getComputedStyle(elementToRescale, null).getPropertyValue('font-size');
+			let startingFontInt = parseInt(startingFontSize);
+
+			resultantFont = (startingFontInt + changeBy) + "px";
+			document.getElementById(id[i]).style.fontSize = resultantFont;
+
+		}
+	}
 }

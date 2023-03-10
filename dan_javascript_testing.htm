@@ -103,11 +103,16 @@
 			
 		</div>
 
-		
+		<div id="growingText">
+			<p id="growingTextExample">Here is some text that can grow and shrink</p>
+
+			<button onclick='TextSizeChange(0,2,["growingTextExample"])'>Press to grow the text.</button>
+			<button onclick='TextSizeChange(0,-2,["growingTextExample"])'>Press to shrink the text.</button>
+		</div>
 
 		<!--
 			TODO:
-			Make some text that grows/shrinks when a button is pressed. (Use css/JS combo.)
+			Learn how to use <input>
 		-->
 
 		<br><br><br><br>
@@ -128,10 +133,7 @@
 	</div>
 
 		<div id="Scripts">
-			<script> Hide(["showTextButton","randomColourButton","hideButtonSpace1","hideButtonSpace2","hideButtonSpace3","DarthVaderImage"]) 
-			
-			
-			</script>
+			<script> Hide(["showTextButton","randomColourButton","hideButtonSpace1","hideButtonSpace2","hideButtonSpace3","DarthVaderImage"])</script>
 
 			<script id="DarkSideButtonScript">
 				function DarkSide() {
