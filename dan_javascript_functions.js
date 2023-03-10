@@ -114,14 +114,16 @@ function BgColourChange(colour) {
 	document.getElementById("body").style.backgroundColor= colour;
 }
 
+function BgRandomColourChange() {BgColourChange(("#" + randomHexAsString(0,16777215)));}
+
 function oneTime_BgColourFlash() {
 	errorMessage("If you have epilepsy, reload the page now before the screen starts to flash.");
 
 	
 	BgColourChange(("#" + randomHexAsString(0,16777215)));
-	function BgFlash() {BgColourChange(("#" + randomHexAsString(0,16777215)));}
+	
 
-	setInterval(BgFlash, 10);
+	setInterval(BgRandomColourChange, 10);
 
 }
 
