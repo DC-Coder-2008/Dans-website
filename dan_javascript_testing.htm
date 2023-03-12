@@ -83,15 +83,17 @@
 
 		<div id="randomColourChange">
 			<p id="changeableColour" style="color: #9000FF">This text is coloured</p>
-			<button onclick='colourChange("#FF5500",["changeableColour"]), Show(["randomColourButton"])'>Click to change the colour to orange</button>
 
+			<button onclick='colourChange("#FF5500",["changeableColour"]), Show(["randomColourButton"])'>Click to change the colour to orange</button>
 			<button id= "randomColourButton" onclick='randomColourChange(["changeableColour"])'>Click to change the colour to something random.</button>
 
 			<p id="flashingText">This text is green.</p>
 
 			<button onclick='colourFlashRandom(10,["flashingText"]); generalTextChange("This text is flashing different colours.", ["flashingText"]); '>
 				Press to make the text flash</button>
+
 				<br><br>
+
 			<button onclick='oneTime_BgColourFlash()'>Press to make the background flash.</button>
 		</div>
 
@@ -110,14 +112,9 @@
 			<button onclick='TextSizeChange(0,-2,["growingTextExample"])'>Press to shrink the text.</button>
 		</div>
 
-		<!--
-			TODO:
-			Learn how to use <input>
-		-->
+		
 
 		<br><br><br><br>
-
-		<hr class="line" >
 
         <div class="return">
             <a href="dan_main_webpage.htm">Back to main page</a>
@@ -125,12 +122,24 @@
 
 		<br><br>
 
+		<hr class="line" >
+
+		
+
+	</div> <!-- id="main" -->
+
+
+	<!--
+		TODO:
+		Learn how to use <input>
+	-->
+
+	<div id="auxillary">
+
 		<div id="Audio">
 			<audio id="DarthVaderThemeTune" loop=true controls>    <source src="Audio/Darth_Vader_tune.mp3">	</audio>
 			<audio id="rickroll" loop=true controls>    <source src="Audio/rickroll.mp3">	</audio>
 		</div>
-
-	</div>
 
 		<div id="Scripts">
 			<script> Hide(["showTextButton","randomColourButton","hideButtonSpace1","hideButtonSpace2","hideButtonSpace3","DarthVaderImage"])</script>
@@ -184,10 +193,12 @@
 				rickroll.play();
 
 				}
-
 			</script>
+			
 		</div>
 
-	</body>
+	</div>
+
+</body>
 
 </html>
