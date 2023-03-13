@@ -1,7 +1,7 @@
-function generalTextChange(text,id) {
+function ChangeText(text,id) {
 	if(text == null || id == null)
 	{
-		errorMessage("Function 'generalTextChange' says: 'ERROR: No source or target'");
+		errorMessage("Function 'ChangeText' says: 'ERROR: No source or target'");
 		return;
 	}
 

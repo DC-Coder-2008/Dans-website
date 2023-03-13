@@ -18,12 +18,12 @@
 			<p id ="example">Here is some test text.</p>
 			<p id ="example2">Here is some more test text.</p>
 			
-			<button onclick = 'generalTextChange("I changed!",["example","example2"])'>Press me to change the text.</button>
+			<button onclick = 'ChangeText("I changed!",["example","example2"])'>Press me to change the text.</button>
 
 			<p id="example3">More text is here!</p>
 			<p id="example4">Even more text is here!</p>
 
-			<button onclick = 'generalTextChange("CHANGE INITIALISED",["example3","example4"])'>Press me to change the text.</button>
+			<button onclick = 'ChangeText("CHANGE INITIALISED",["example3","example4"])'>Press me to change the text.</button>
 		</div>
 
 		<br>
@@ -69,13 +69,13 @@
 			<a class="defaultLink" id="ChangeableLinkExample" target="_blank" href="https://images.google.com">Google Images.</a>
 			<br><br>
 			<button onclick='linkSourceChange("https://www.youtube.com/watch?v=dQw4w9WgXcQ",["ChangeableLinkExample"]),
-			generalTextChange("Useless website!",["ChangeableLinkExample"])'>This button will change the website this link goes to.</button>
+			ChangeText("Useless website!",["ChangeableLinkExample"])'>This button will change the website this link goes to.</button>
 		</div>
 
 		<br>
 
 		<div id="randomStringOfNumbers">
-			<button onclick='generalTextChange(random(1,9999999999999),["number"])'>Press to generate a number.</button>
+			<button onclick='ChangeText(random(1,9999999999999),["number"])'>Press to generate a number.</button>
 			<p id="number"></p>
 		</div>
 
@@ -89,7 +89,7 @@
 
 			<p id="flashingText">This text is green.</p>
 
-			<button onclick='colourFlashRandom(10,["flashingText"]); generalTextChange("This text is flashing different colours.", ["flashingText"]); '>
+			<button onclick='colourFlashRandom(10,["flashingText"]); ChangeText("This text is flashing different colours.", ["flashingText"]); '>
 				Press to make the text flash</button>
 
 				<br><br>
@@ -112,6 +112,13 @@
 			<button onclick='TextSizeChange(0,-2,["growingTextExample"])'>Press to shrink the text.</button>
 		</div>
 
+		<br><br>
+
+		<div id="inputTesting">
+			<p>Type some text into the input box below.</p>
+			<input id="testInput">         <button onclick='ChangeText(testInput.value,["variableText"]);testInput.value=""'>Click to change the text below.</button>
+			<p id="variableText">Here is some changeable text</p>
+		</div>
 		
 
 		<br><br><br><br>
@@ -134,7 +141,7 @@
 		Learn how to use <input>
 	-->
 
-	<div id="auxillary">
+	<div id="secondary">
 
 		<div id="Audio">
 			<audio id="DarthVaderThemeTune" loop=true controls>    <source src="Audio/Darth_Vader_tune.mp3">	</audio>
@@ -155,7 +162,7 @@
 				}
 
 				function NeverUnderestimateThePower() {
-					generalTextChange("Never underestimate the power of the dark side.", ["DarkSideButton"]);
+					ChangeText("Never underestimate the power of the dark side.", ["DarkSideButton"]);
 				}
 
 				function BlackScreen() {
