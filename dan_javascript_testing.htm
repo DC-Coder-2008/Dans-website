@@ -6,6 +6,48 @@
 	<title>Dan's website: javascript practice</title>
 
 	<script src="dan_javascript_functions.js"></script>
+
+	<div id="Scripts">
+		<script> Hide(["showTextButton","randomColourButton","hideButtonSpace1","hideButtonSpace2","hideButtonSpace3","DarthVaderImage"])</script>
+
+		<script id="DarkSideButtonScript">
+			function DarkSide() {
+
+				setTimeout(NeverUnderestimateThePower, 250);
+				setTimeout(BlackScreen, 3000);
+				setTimeout(DarthVader, 4000);
+				setTimeout(DarthVaderTunePlay, 4250);
+				setTimeout(Rickroll, 14000)
+			}
+
+			function NeverUnderestimateThePower() {
+				ChangeText("Never underestimate the power of the dark side.", ["DarkSideButton"]);
+			}
+
+			function BlackScreen() {
+				BgColourChange("#000000");
+			}
+
+			function DarthVader() {
+				document.getElementById("body").style.backgroundImage= "url('Images/DarthVader')";
+				document.getElementById("body").style.backgroundRepeat= "no-repeat";
+				document.getElementById("body").style.backgroundPosition= "center";
+				document.getElementById("body").style.backgroundAttachment= "fixed";
+			}
+
+			function DarthVaderTunePlay() {
+				var darthVaderTune = document.getElementById("DarthVaderThemeTune");
+				darthVaderTune.volume = 1;
+				darthVaderTune.currentTime = 0;
+				darthVaderTune.play();
+				
+			}
+
+			
+		</script>
+		
+	</div>
+
 </head>
 
 	
@@ -45,6 +87,7 @@
 
 			<button id="hideTextButton" onclick='Hide(["hideTest","hideTextButton"]); Show(["showTextButton","hideButtonSpace1","hideButtonSpace2","hideButtonSpace3"])'>
 				Click to hide text.</button>
+
 			<button id="showTextButton" onclick='Show(["hideTest","hideTextButton"]); Hide(["showTextButton","hideButtonSpace1","hideButtonSpace2","hideButtonSpace3"])'>
 				Click to show text</button>
 		</div>
@@ -60,6 +103,7 @@
 
 		<div id="iframe_stuff">
 			<iframe id="changeableIframeExample" width="700" height="350" src="https://www.wikipedia.org/"></iframe><br><br>
+
 			<button onclick='generalSourceChange("https://theuselessweb.com/",["changeableIframeExample"])'>This button will change this webpage.</button>
 		</div>
 
@@ -116,22 +160,14 @@
 
 		<div id="inputTesting">
 			<p>Type some text into the input box below.</p>
-			<input id="testInput">         <button onclick='ChangeText(testInput.value,["variableText"]);testInput.value=""'>Click to change the text below.</button>
+
+			<input id="testInput" value="Delete this text and write your own" size="50" maxlength="10000"> <button onclick='ChangeText(testInput.value,["variableText"]);testInput.value=""; CheckForRickroll(["variableText"])'>Click to change the text below.</button>
+
 			<p id="variableText">Here is some changeable text</p>
 		</div>
 		
 
-		<br><br><br><br>
-
-        <div class="return">
-            <a href="dan_main_webpage.htm">Back to main page</a>
-        </div>
-
-		<br><br>
-
-		<hr class="line" >
-
-		
+		<br><br><br><br><br><br>
 
 	</div> <!-- id="main" -->
 
@@ -143,65 +179,15 @@
 
 	<div id="secondary">
 
+		<hr class="line" >
+
+		<div class="return">
+            <a href="dan_main_webpage.htm">Back to main page</a>
+        </div>
+
 		<div id="Audio">
 			<audio id="DarthVaderThemeTune" loop=true controls>    <source src="Audio/Darth_Vader_tune.mp3">	</audio>
 			<audio id="rickroll" loop=true controls>    <source src="Audio/rickroll.mp3">	</audio>
-		</div>
-
-		<div id="Scripts">
-			<script> Hide(["showTextButton","randomColourButton","hideButtonSpace1","hideButtonSpace2","hideButtonSpace3","DarthVaderImage"])</script>
-
-			<script id="DarkSideButtonScript">
-				function DarkSide() {
-
-					setTimeout(NeverUnderestimateThePower, 250);
-					setTimeout(BlackScreen, 3000);
-					setTimeout(DarthVader, 4000);
-					setTimeout(DarthVaderTunePlay, 4250);
-					setTimeout(Rickroll, 14000)
-				}
-
-				function NeverUnderestimateThePower() {
-					ChangeText("Never underestimate the power of the dark side.", ["DarkSideButton"]);
-				}
-
-				function BlackScreen() {
-					BgColourChange("#000000");
-				}
-
-				function DarthVader() {
-					document.getElementById("body").style.backgroundImage= "url('Images/DarthVader')";
-					document.getElementById("body").style.backgroundRepeat= "no-repeat";
-					document.getElementById("body").style.backgroundPosition= "center";
-					document.getElementById("body").style.backgroundAttachment= "fixed";
-				}
-
-				function DarthVaderTunePlay() {
-					var darthVaderTune = document.getElementById("DarthVaderThemeTune");
-					darthVaderTune.volume = 1;
-					darthVaderTune.currentTime = 0;
-					darthVaderTune.play();
-					
-				}
-
-				function Rickroll() {
-				
-				document.getElementById("DarthVaderThemeTune").pause()
-
-				document.getElementById("body").style.backgroundImage= "url('Gifs/rickroll.gif')"
-				document.getElementById("body").style.backgroundRepeat= "no-repeat";
-				document.getElementById("body").style.backgroundPosition= "center";
-				document.getElementById("body").style.backgroundSize= "720px 720px";
-				document.getElementById("body").style.backgroundAttachment= "fixed";
-
-				var rickroll = document.getElementById("rickroll");
-				rickroll.volume= 1;
-				rickroll.currentTime = 0;
-				rickroll.play();
-
-				}
-			</script>
-			
 		</div>
 
 	</div>

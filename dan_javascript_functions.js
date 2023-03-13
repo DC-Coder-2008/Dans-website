@@ -148,3 +148,30 @@ function TextSizeChange (setTo,changeBy,id) {
 		}
 	}
 }
+
+function Rickroll() {
+			
+	document.getElementById("DarthVaderThemeTune").pause()
+
+	let rickroll = document.getElementById("rickroll");
+	rickroll.volume= 1;
+	rickroll.currentTime = 0;
+	rickroll.play();
+
+	document.getElementById("body").style.backgroundImage= "url('Gifs/rickroll.gif')"
+	document.getElementById("body").style.backgroundRepeat= "no-repeat";
+	document.getElementById("body").style.backgroundPosition= "center";
+	document.getElementById("body").style.backgroundSize= "720px 720px";
+	document.getElementById("body").style.backgroundAttachment= "fixed";
+
+}
+
+function CheckForRickroll(id) {
+
+	for(let i = 0; i < id.length; i++) {
+		let element = document.getElementById(id[i]).innerHTML;
+		if (element == "Never gonna give you up" || element == "Rick Astley") {
+			Rickroll()
+		}
+	}
+}
