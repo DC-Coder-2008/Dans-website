@@ -33,7 +33,15 @@ function DarthVaderTunePlay() {
 
 
 function MathsTrickSolve() {
-    let input = parseInt(document.getElementById("mathsTrickInput").value);
+    let input = document.getElementById("mathsTrickInput").value;
     let trimmedInput = input.slice(0,4);
-    errorMessage(trimmedInput);
+    let part1 = trimmedInput.substring(0,2)
+    let part2 = trimmedInput.substring(2)
+    let output1 = parseInt(part1)+1;
+    let output2 = parseInt(part2)+1;
+
+    let fullOutput = "Your first number is "+ output1 + " and your second number is " + output2 +".";
+    errorMessage(fullOutput);
+
 }
+
