@@ -11,17 +11,61 @@
 
     </head>
 
-    <body>
+    <body id="formMain">
 
         <h1>Fill out the form!!</h1>
 
-        <br><br>
+        <br>
+        <table>
+            <tr>
+                <td><label for="Fname"  >First name:</label></td>
+                <td><input id="Fname"></td>
+            </tr>
+            <tr>
+                <td><label for="Midname">Middle name:</label></td>
+                <td><input id="Midname"></td>
+            </tr>
+            <tr>
+                <td><label for="Surname">Surname:</label></td>
+                <td><input id="Surname"></td>
+            </tr>
+            <tr>
+                <td><label for="Age">Age:</label></td>
+                <td><input id="Age" size="1" maxlength="3"></td>
+            </tr>
+            <tr>
+                <td><label for="DoB">Date of birth</label></td>
+                <td><input id="DoB" placeholder="DD/MM/YYYY" size="8" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td><label for="Pets">Number of pets in your home</label></td>
+                <td>
+                    <div id="PetsDropdown" class="dropdown">
 
-        <label for="Fname">First name:</label> <input id="Fname"><br>
-        <label for="Midname">Middle name:</label> <input id="Midname"><br>
-        <label for="Surname">Surname:</label> <input id="Surname"><br>
-        <label for="Age">Age:</label> <input id="Age" size="1" maxlength="3"><br>
-        <label for="DoB">Date of birth</label> <input id="DoB" placeholder="DD/MM/YYYY" size="8" maxlength="10"><br>
+                        <button id="PetsDropdownBTN" onclick='Show(["PetsDropdownContent"])'>Choose:</button>
+        
+                        <div id="PetsDropdownContent" class="dropdownContent">
+                            <button>0</button>
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                            <button>6</button>
+                            <button>7</button>
+                            <button>8</button>
+                            <button>9</button>
+                            <button>10</button>
+                            <button>Other...</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div id="scripts">
+            <script>Hide(["PetsDropdownContent"])</script>
+        </div>
 
     </body>
 

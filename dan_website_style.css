@@ -34,8 +34,8 @@ p {
 	color: #0036FF;
 }
 
-table, th, td {
-	border: 1px solid #000000;
+#formMain table, th, td {
+	border: none;
 }
 
 .line {
@@ -45,4 +45,35 @@ table, th, td {
 
 h4 {
 	color: #FF5500;
+}
+
+.dropdown button {
+	background-color: #FF5500;
+	color: #FFFFFF;
+	border: 3px solid #171717;
+	font-size: 16px;
+}
+
+.dropdown button:hover, .dropdown button:focus {
+	background-color: #DD3300;
+}
+
+.dropdownContent button {
+	background-color: #6f00ff;
+	color: #FFFFFF;
+	border: 3px solid #000000;
+	font-size: 12px;
+}
+
+.dropdownContent button:hover{
+	background-color: #3f00cf;
+}
+
+.dropdownContent button:focus {
+	background-color: #0088ff;
+	color: #000000;
+}
+
+#infoForm {
+	border: none;
 }
