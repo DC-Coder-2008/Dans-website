@@ -42,29 +42,45 @@
                 <td>
                     <div id="PetsDropdown" class="dropdown">
 
-                        <button id="PetsDropdownBTN" onclick='Show(["PetsDropdownContent"])'>Choose:</button>
+                        <button id="PetsDropdownBTN" class="dropdownButton"onclick='Show(["PetsDropdownContent"])'>Choose:</button>
         
                         <div id="PetsDropdownContent" class="dropdownContent">
-                            <button>0</button>
-                            <button>1</button>
-                            <button>2</button>
-                            <button>3</button>
-                            <button>4</button>
-                            <button>5</button>
-                            <button>6</button>
-                            <button>7</button>
-                            <button>8</button>
-                            <button>9</button>
-                            <button>10</button>
-                            <button>Other...</button>
+                            <button class="DropdownContentButton">0</button>
+                            <button class="DropdownContentButton">1</button>
+                            <button class="DropdownContentButton">2</button>
+                            <button class="DropdownContentButton">3</button>
+                            <button class="DropdownContentButton">4</button>
+                            <button class="DropdownContentButton">5</button>
+                            <button class="DropdownContentButton">6</button>
+                            <button class="DropdownContentButton">7</button>
+                            <button class="DropdownContentButton">8</button>
+                            <button class="DropdownContentButton">9</button>
+                            <button class="DropdownContentButton">10</button>
+                            <button class="dropdownButton" id="PetsOtherNumberButton" onclick='Show(["PetsOtherNumberContent"])'>Other...</button>
+                            <div class="dropdownContent" id="PetsOtherNumberContent">
+                                <input id="PetsOtherInput" placeholder="Type your number here..." maxlength="3">
+                            </div>
                         </div>
                     </div>
                 </td>
             </tr>
+            <tr>
+                <td><label for="Country">Country of residence</label></td>
+                <td><input id="Country" maxlength="100"></td>
+            </tr>
         </table>
 
+        <br>
+
+        <button id="submitButton" onclick="ValidateForm()">Submit.</button>
+
         <div id="scripts">
-            <script>Hide(["PetsDropdownContent"])</script>
+            <script>
+                 let dropdowns = document.getElementsByClassName("dropdownContent");
+                 for (let i = 0; i<dropdowns.length;i++) {
+                    dropdowns[i].style.display = "none"
+                 }
+            </script>
         </div>
 
     </body>
