@@ -45,3 +45,22 @@ function MathsTrickSolve() {
 
 }
 
+function ValidateForm () {
+
+    let valid = true
+
+    const formData = {
+        Fname: document.getElementById("Fname").value,
+        Midname: document.getElementById("Midname").value,
+        Surname: document.getElementById("Surname").value,
+        Age: document.getElementById("Age").value,
+        DoB: document.getElementById("DoB").value,
+        Pets: document.getElementById("PetsOtherInput").value,
+        Country: document.getElementById("Country").value,
+    }
+
+    if (formData.Fname == null || formData.Fname == "") {
+        valid = false;
+    }
+
+}

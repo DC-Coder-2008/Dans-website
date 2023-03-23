@@ -38,24 +38,24 @@
                 <td><input id="DoB" placeholder="DD/MM/YYYY" size="8" maxlength="10"></td>
             </tr>
             <tr>
-                <td><label for="Pets">Number of pets in your home</label></td>
+                <td><label for="PetsDropdownBTN">Number of pets in your home</label></td>
                 <td>
                     <div id="PetsDropdown" class="dropdown">
 
-                        <button id="PetsDropdownBTN" class="dropdownButton"onclick='Show(["PetsDropdownContent"])'>Choose:</button>
+                        <button id="PetsDropdownBTN" class="dropdownButton" onclick='Show(["PetsDropdownContent"])'>Choose:</button>
         
                         <div id="PetsDropdownContent" class="dropdownContent">
-                            <button class="DropdownContentButton">0</button>
-                            <button class="DropdownContentButton">1</button>
-                            <button class="DropdownContentButton">2</button>
-                            <button class="DropdownContentButton">3</button>
-                            <button class="DropdownContentButton">4</button>
-                            <button class="DropdownContentButton">5</button>
-                            <button class="DropdownContentButton">6</button>
-                            <button class="DropdownContentButton">7</button>
-                            <button class="DropdownContentButton">8</button>
-                            <button class="DropdownContentButton">9</button>
-                            <button class="DropdownContentButton">10</button>
+                            <button class="DropdownContentButton" onclick='WriteToInput(0, ["PetsOtherInput"])'>0</button>
+                            <button class="DropdownContentButton" onclick='WriteToInput(1, ["PetsOtherInput"])'>1</button>
+                            <button class="DropdownContentButton" onclick='WriteToInput(2, ["PetsOtherInput"])'>2</button>
+                            <button class="DropdownContentButton" onclick='WriteToInput(3, ["PetsOtherInput"])'>3</button>
+                            <button class="DropdownContentButton" onclick='WriteToInput(4, ["PetsOtherInput"])'>4</button>
+                            <button class="DropdownContentButton" onclick='WriteToInput(5, ["PetsOtherInput"])'>5</button>
+                            <button class="DropdownContentButton" onclick='WriteToInput(6, ["PetsOtherInput"])'>6</button>
+                            <button class="DropdownContentButton" onclick='WriteToInput(7, ["PetsOtherInput"])'>7</button>
+                            <button class="DropdownContentButton" onclick='WriteToInput(8, ["PetsOtherInput"])'>8</button>
+                            <button class="DropdownContentButton" onclick='WriteToInput(9, ["PetsOtherInput"])'>9</button>
+                            <button class="DropdownContentButton" onclick='WriteToInput(10, ["PetsOtherInput"])'>10</button>
                             <button class="dropdownButton" id="PetsOtherNumberButton" onclick='Show(["PetsOtherNumberContent"])'>Other...</button>
                             <div class="dropdownContent" id="PetsOtherNumberContent">
                                 <input id="PetsOtherInput" placeholder="Type your number here..." maxlength="3">

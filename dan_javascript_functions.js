@@ -175,3 +175,11 @@ function CheckForRickroll(id) {
 		}
 	}
 }
+
+function WriteToInput (text, id) {
+
+	for(let i = 0; i < id.length; i++) {
+		document.getElementById(id[i]).value= text;
+	}
+	
+}
