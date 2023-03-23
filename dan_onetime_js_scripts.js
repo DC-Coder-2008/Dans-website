@@ -50,17 +50,24 @@ function ValidateForm () {
     let valid = true
 
     const formData = {
-        Fname: document.getElementById("Fname").value,
-        Midname: document.getElementById("Midname").value,
-        Surname: document.getElementById("Surname").value,
-        Age: document.getElementById("Age").value,
-        DoB: document.getElementById("DoB").value,
-        Pets: document.getElementById("PetsOtherInput").value,
-        Country: document.getElementById("Country").value,
+        Fname: document.getElementById("Fname").value.trim(),
+        Midname: document.getElementById("Midname").value.trim(),
+        Surname: document.getElementById("Surname").value.trim(),
+        Age: document.getElementById("Age").value.trim().parseInt(),
+        DoB: document.getElementById("DoB").value.trim(),
+        Pets: document.getElementById("PetsOtherInput").value.trim(),
+        Country: document.getElementById("Country").value.trim(),
     }
 
     if (formData.Fname == null || formData.Fname == "") {
         valid = false;
     }
 
+    if (formData.Surname == null || formData.Surname == "") {
+        valid = false;
+    }
+
+    if (formData.Age == null || formData.Age == "") {
+        valid = false;
+    }
 }
