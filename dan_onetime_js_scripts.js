@@ -53,11 +53,12 @@ function ValidateForm () {
         Fname: document.getElementById("Fname").value.trim(),
         Midname: document.getElementById("Midname").value.trim(),
         Surname: document.getElementById("Surname").value.trim(),
-        Age: document.getElementById("Age").value.trim().parseInt(),
+        Age: document.getElementById("Age").value.trim(),
         DoB: document.getElementById("DoB").value.trim(),
         Pets: document.getElementById("PetsOtherInput").value.trim(),
         Country: document.getElementById("Country").value.trim(),
     }
+        
 
     if (formData.Fname == null || formData.Fname == "") {
         valid = false;
@@ -67,7 +68,37 @@ function ValidateForm () {
         valid = false;
     }
 
-    if (formData.Age == null || formData.Age == "") {
+    if (isNaN( parseInt( formData.Age)) == true) {
         valid = false;
     }
+
+    const DoB = formData.DoB.split("/");
+
+    if (DoB.length != 3) {
+        valid=false;
+    }
+
+    for (let i = 0; i < DoB.length; i++) {
+        if (DoB[i] == "") {
+            valid=false
+        }
+    }
+
+
+    if (formData.Country == null || formData.Country == "") {
+        valid = false;
+    }
+
+    
+    if ( isNaN( parseInt( formData.Pets)) == true) {
+            valid = false;
+    }
+
+    if (valid == true) {
+        Hide(["errorMessage"]);
+    }
+    else {
+        Show(["errorMessage"]);
+    }
+
 }

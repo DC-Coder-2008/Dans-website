@@ -81,3 +81,8 @@ h4 {
 #submitButton {
 	font-size: 15px;
 }
+
+#errorMessage {
+	font-size: 13.5px;
+	color: #FF0000;
+}

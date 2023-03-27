@@ -73,6 +73,9 @@
         <br>
 
         <button id="submitButton" onclick="ValidateForm()">Submit.</button>
+        <p id="errorMessage"> One or more of your inputs are invalid. Please correct them. 
+             Make sure you have filled in all of the boxes, and you have not put any letters in a box that needs a number input. 
+             Make sure that your date is in the format 'DD/MM/YYYY', with forward slashes being used.</p>
 
         <div id="scripts">
             <script>
@@ -80,6 +83,8 @@
                  for (let i = 0; i<dropdowns.length;i++) {
                     dropdowns[i].style.display = "none"
                  }
+
+                 Hide(["errorMessage"]);
             </script>
         </div>
 
