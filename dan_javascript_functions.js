@@ -18,7 +18,9 @@ function Hide(id) {
 	}
 
 	for (let i = 0; i < id.length; i++) {
-		document.getElementById(id[i]).style.display = "none";
+		if(document.getElementById(id[i])) {
+			document.getElementById(id[i]).style.display = "none";
+		}
 	}
 }
 

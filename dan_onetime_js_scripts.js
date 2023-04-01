@@ -78,11 +78,16 @@ function ValidateForm () {
         valid=false;
     }
 
+
     for (let i = 0; i < DoB.length; i++) {
         if (DoB[i] == "") {
             valid=false
         }
+        if (isNaN(parseInt(DoB[i])) == true) {
+            valid = false
+        }
     }
+
 
 
     if (formData.Country == null || formData.Country == "") {
@@ -94,8 +99,23 @@ function ValidateForm () {
             valid = false;
     }
 
+    let validatedFormData = {
+
+    }
+
     if (valid == true) {
         Hide(["errorMessage"]);
+
+        validatedFormData = {
+            Fname: document.getElementById("Fname").value.trim(),
+            Midname: document.getElementById("Midname").value.trim(),
+            Surname: document.getElementById("Surname").value.trim(),
+            Age: parseInt(document.getElementById("Age").value.trim()),
+            DoB: parseInt(DoB[0]) + "/" + parseInt(DoB[1]) + "/" + parseInt(DoB[2]),
+            Pets: parseInt(document.getElementById("PetsOtherInput").value.trim()),
+            Country: document.getElementById("Country").value.trim(),
+        }
+            
     }
     else {
         Show(["errorMessage"]);
