@@ -47,6 +47,17 @@ h4 {
 	color: #FF5500;
 }
 
+table, td {
+	border: 1px solid #000000;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+.WebDBHead {
+	color: #FF0000;
+	font-weight: bold
+}
+
 .dropdownButton {
 	background-color: #FF5500;
 	color: #FFFFFF;

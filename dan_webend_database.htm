@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href ="dan_website_style.css">
+        <title>Dan's website: Webend database</title>
+    
+        <script src="dan_javascript_functions.js"></script>
+        <script src="dan_onetime_js_scripts.js"></script>
+    
+    </head>
+
+    <body>
+        <table>
+            <tr id="Heading">
+              <td><p class= "WebDBHead" id = "Fname_header">First name</p></td>
+              <td><p class= "WebDBHead" id = "Midname_header">Middle name</p></td>
+              <td><p class= "WebDBHead" id = "Surname_header">Last name</p></td>
+              <td><p class= "WebDBHead" id = "Age_header">Age</p></td>
+              <td><p class= "WebDBHead" id = "DoB_header">Date of birth</p></td>
+              <td><p class= "WebDBHead" id = "Pets_header">Number of pets</p></td>
+              <td><p class= "WebDBHead" id = "Country_header">Country</p></td>
+            </tr>
+            <tr id="row_0">
+                <td class= "WebDBContent" id="Fname_0"></td>
+                <td class= "WebDBContent" id="Midname_0"> </td>
+                <td class= "WebDBContent" id="Surname_0"></td>
+                <td class= "WebDBContent" id="Age_0"></td>
+                <td class= "WebDBContent" id="DoB_0"></td>
+                <td class= "WebDBContent" id="Pets_0"></td>
+                <td class= "WebDBContent" id="Country_0"></td>
+            </tr>
+        </table>
+
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const dataString = urlParams.get('data');
+            
+            console.log("dataString:", dataString);
+            const passedFormData = JSON.parse(dataString);
+            console.log("passedFormData:", passedFormData);
+
+            if (passedFormData) {
+                document.getElementById("Fname_0").textContent = passedFormData.Fname;
+                document.getElementById("Midname_0").textContent = passedFormData.Midname;
+                document.getElementById("Surname_0").textContent = passedFormData.Surname;
+                document.getElementById("Age_0").textContent = passedFormData.Age;
+                document.getElementById("DoB_0").textContent = passedFormData.DoB;
+                document.getElementById("Pets_0").textContent = passedFormData.Pets;
+                document.getElementById("Country_0").textContent = passedFormData.Country;
+           }
+        </script>
+    </body>
+</html>
